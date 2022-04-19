@@ -34,7 +34,7 @@ public class StudentService_impl implements StudentServices {
 	public ResponseTemplateVO getStudentwithBranch(String id) {
 		ResponseTemplateVO vo = new ResponseTemplateVO();
 		Student student= dao.getStudent(id);
-		Branch branch = restTemplate.getForObject("http://localhost:8082/branch/getBranch/"+ student.getBranch_id(),Branch.class);
+		Branch branch = restTemplate.getForObject("http://BRANCH-SERVICE/branch/getBranch/"+ student.getBranch_id(),Branch.class);
 		vo.setStudent(student);
 		vo.setBranch(branch);
 		return vo;
