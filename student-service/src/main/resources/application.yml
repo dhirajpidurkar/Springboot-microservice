@@ -3,12 +3,4 @@ server:
   
 spring:
   application:
-    name: STUDENT-SERVICE  
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultzone: http://localhost:8761/eureka/
-  instance:
-    hostname: localhost
+    name: STUDENT-SERVICE
